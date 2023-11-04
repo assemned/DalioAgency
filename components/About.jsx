@@ -6,7 +6,7 @@ import Button from "./Button";
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.5,
   });
   const animateRight = {
     hidden: { opacity: 0, x: 300 },
