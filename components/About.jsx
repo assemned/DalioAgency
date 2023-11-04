@@ -20,15 +20,15 @@ const About = () => {
   return (
     <section
       id="about"
+      ref={ref}
       className="padding-x max-container flexCenter py-20 gap-20 max-lg:flex-col">
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={animateLeft}
-        transition={{ duration: 1 }}>
-        <div
-          className="flex-1 flex justify-start items-start gap-8 flex-col"
-          ref={ref}>
+        transition={{ duration: 1 }}
+        ref={ref}>
+        <div className="flex-1 flex justify-start items-start gap-8 flex-col">
           <h2 className="text-h-2 font-bold">
             We Are A Creative Digital Agency
           </h2>
@@ -52,9 +52,9 @@ const About = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={animateRight}
-        transition={{ duration: 1 }}>
-        ref={ref}
-        <div className="flex-1" ref={ref}>
+        transition={{ duration: 1 }}
+        ref={ref}>
+        <div className="flex-1">
           <img src="/about.png" alt="About" />
         </div>
       </motion.div>
